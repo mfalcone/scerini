@@ -14,7 +14,8 @@ function agregar_estilos_y_js() {
 	wp_enqueue_style( 'wpb-google-fonts', 'http://fonts.googleapis.com/css?family=Karla|Raleway', false ); 
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), '1.1', 'all');
 	wp_enqueue_script('jquery');
- 
+	wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ) );
+ 	wp_enqueue_script( 'scerini', get_stylesheet_directory_uri() . '/js/scerini.js', array( 'bootstrap', 'jquery' ), '1.0', false );
 }
 
 add_action( 'wp_enqueue_scripts', 'agregar_estilos_y_js' );

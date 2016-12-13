@@ -1,7 +1,56 @@
 .main-header{
+	h1.logo{
+		background:url(images/logo.jpg) no-repeat;
+		width: 360px;
+		height: 31px;
+		text-indent: -1000px;
+	}
 	.barra-sup{
 		background: $azul;
 		color: #FFF;
 		height:70px;
+		&.der{
+			text-align: right;
+			line-height: 100px;
+			span span{
+				font-size:2rem;
+				margin-right: 10px;
+				&.fa-mobile-phone{
+					font-size: 3rem;
+					position: relative;
+					top:5px;
+
+				}
+			}
+			.tel{
+				margin-right: 20px;
+			}
+		}
+	}
+
+	.search-form{
+		position:relative;
+		top:5px;
+		input{
+			background:$azul;
+			border-radius: 10px;
+			padding:5px;
+			border:none;
+			color: #FFF;
+			outline: none;
+			&::-webkit-input-placeholder {
+				color: #7BB5E6;
+				}
+		}
+
+		button{
+			position:absolute;
+			right: 10px;
+			top:0px;
+			border:0;
+			background:none;
+			color: #FFF;
+			font-size:2rem;
+		}
 	}
 }
