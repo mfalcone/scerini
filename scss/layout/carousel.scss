@@ -1,0 +1,24 @@
+.simple-carousel{
+	background:#f0edde;
+	margin-top:10px;
+	.carousel{
+	
+		.carousel-control{
+			background:none;
+			width: 5%;
+			span.fa{
+				color: $azul;
+				margin-top:500%;
+			}
+		}
+
+		.carousel-indicators{
+			li{
+				border-color: $azul;
+				&.active{
+					background-color:$azul;
+				}
+			}
+		}
+	}
+}
