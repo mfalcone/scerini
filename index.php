@@ -1,7 +1,7 @@
 <?php get_header(); // This fxn gets the header.php file and renders it ?>
 
 <div class="simple-carousel" data-example-id="simple-carousel" class="">
-	<div class="carousel slide container" id="carousel-example-generic" data-ride="carousel">
+	<div class="carousel slide carousel-fade container" id="carousel-example-generic" data-ride="carousel">
 		<ol class="carousel-indicators"> 
 			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li> 
 			<li data-target="#carousel-example-generic" data-slide-to="1" class=""></li> 

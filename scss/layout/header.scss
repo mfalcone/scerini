@@ -1,3 +1,10 @@
+.wrapper{
+	min-height:100vh;
+	height: auto !important;
+    height: 100%;
+    margin: 0 auto -172px;
+    padding-bottom:172px;
+}
 .main-header{
 	h1.logo{
 		background:url(images/logo.jpg) no-repeat;
@@ -46,11 +53,30 @@
 		button{
 			position:absolute;
 			right: 10px;
-			top:0px;
+			top:-5px;
 			border:0;
 			background:none;
 			color: #FFF;
 			font-size:2rem;
+		}
+	}
+
+	.navbar{
+		margin-bottom:0;
+		min-height: auto;
+		li{
+			float:left;
+			font-size:1.45rem;
+			text-transform: uppercase;
+
+			&.current-menu-item{
+				a{
+					color:#000;
+				} 
+			}
+			.caret{
+				margin-left:10px;
+			}
 		}
 	}
 }

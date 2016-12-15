@@ -1,7 +1,10 @@
 .simple-carousel{
 	background:#f0edde;
-	margin-top:10px;
 	.carousel{
+
+		.carousel-inner{
+			padding:0;
+		}
 	
 		.carousel-control{
 			background:none;
@@ -20,5 +23,36 @@
 				}
 			}
 		}
+
+		.item {
+			opacity: 0;
+		    left: 0px !important;
+		   -webkit-transition: opacity .4s; /*adjust timing here */
+         -moz-transition: opacity .4s;
+           -o-transition: opacity .4s;
+              transition: opacity .9s ease-in-out;
+			
+              img{
+              	display: block;
+              }
+		  }
+		  .active {
+			  opacity: 1;
+			   left: 0 !important;
+			}
+		  .carousel-control {
+		    background-image: none; // remove background gradients on controls
+		  }
+		  // Fade controls with items
+		  .next.left,
+		  .prev.right {
+		    opacity: 1;
+		    z-index: 1;
+		  }
+		  .active.left,
+		  .active.right {
+		    opacity: 0;
+		    z-index: 2;
+		  }
 	}
 }

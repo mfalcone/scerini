@@ -7,9 +7,12 @@
 <html>
 	<head>
 		<title><?php wp_title("::", "true", "right");?> <?php bloginfo('name'); ?></title>
+		  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+
 		<?php wp_head();?>
 	</head>
 	<body <?php body_class( 'class-name' ); ?>>
+		<div class="wrapper">
 		<header class="main-header container">
 			<div class="col-md-6 barra-sup">
 				<h1 class="logo">Silvana Cerini &gt; Negociación</h1>
@@ -20,7 +23,13 @@
 			</div>
 			<div class="row">
 				<div class="col-md-10">
-					<?php wp_nav_menu( array( 'theme_location' => 'home-menu', 'menu_class' => 'home-menu') ); ?>
+					<div class="navbar ">
+							<?php wp_nav_menu( array( 'theme_location' => 'home-menu',
+							  'depth' => 2,
+							  'container' => false,
+							  'menu_class' => 'nav',
+							  'walker' => new BootstrapNavMenuWalker())); ?>
+					</div>
 				</div>
 				<div class="col-md-2">
 					<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
