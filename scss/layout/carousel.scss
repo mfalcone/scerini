@@ -35,6 +35,32 @@
               img{
               	display: block;
               }
+
+              &:nth-child(1){
+              	h3{
+					right:0;
+              		top:0;
+              		width:45%;
+					text-align: right;
+              	}
+              }
+
+              &:nth-child(2){
+              	h3{
+              		left:0;
+              		top:0;
+              		width:100%;
+              		text-align: center;
+              	}
+              }
+
+              &:nth-child(3){
+              	h3{
+              		top:0;
+              		left:0;
+              		width:35%;
+              	}
+              }
 		  }
 		  .active {
 			  opacity: 1;
@@ -54,5 +80,11 @@
 		    opacity: 0;
 		    z-index: 2;
 		  }
+	}
+
+	h3{
+		font-size:2rem;
+		position: absolute;
+		font-family: 'Raleway';
 	}
 }

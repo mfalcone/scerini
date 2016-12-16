@@ -1,0 +1,26 @@
+.posteos{
+	article{
+		height: 660px;
+		h2{
+			font-size: 3rem;
+			font-family: 'Raleway';
+			text-transform: uppercase;
+
+			a{
+				color: #23282f;
+			}
+		}
+		.foto{
+			border:1px solid #666;
+			background: #999;
+			img{
+				max-width:100%;
+				height: auto;
+
+			}
+		}
+		p{
+			&:last-child:after { content: "..."; }
+		}
+	}
+}

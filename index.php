@@ -10,12 +10,16 @@
 		<div class="carousel-inner col-md-12" role="listbox"> 
 			<div class="item active"> 
 				<img alt="First slide [900x500]" src="<?php echo get_stylesheet_directory_uri();?>/images/seniora_joven_mujer.jpg" data-holder-rendered="true"> 
+				<h3 class="caption">"nunca negociemos por temor, pero tampoco nunca tengamos temor de negociar"</h3>
 			</div> 
 			<div class="item "> 
 				<img alt="Second slide [900x500]"  src="<?php echo get_stylesheet_directory_uri();?>/images/manos.jpg" data-holder-rendered="true"> 
+					<h3 class="caption">"No decir mas de lo que haga falta, a quien haga falta y cuando haga falta"</h3>
 			</div> 
 			<div class="item "> 
 				<img alt="Second slide [900x500]"  src="<?php echo get_stylesheet_directory_uri();?>/images/equipo.jpg" data-holder-rendered="true"> 
+				<h3 class="caption">Negociar con uno mismo es no perdurar en la desición equivocada</h3>
+
 				<!--<a href="http://www.freepik.com/free-photos-vectors/business">Business photograph designed by Freepik</a>-->
 			</div> 
 		</div> 
@@ -23,7 +27,25 @@
 		<a href="#carousel-example-generic" class="right carousel-control" role="button" data-slide="next"> <span class="fa fa-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> 
 	</div> 
 </div>
-
+<section class="posteos container">
+		<?php
+		$args = array( 'post_type' => array( 'post', 'page') ,'category_name' => 'inicio', 'posts_per_page' => 10 );
+		$loop = new WP_Query( $args );
+		while ( $loop->have_posts() ) : $loop->the_post(); $counter++; ?>
+		<article class="col-md-6">
+				<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+				<div class="foto">
+					<?php 
+						if ( has_post_thumbnail() ) {
+							the_post_thumbnail('homepage-thumb');
+						}
+					?>
+				</div>
+				<?php echo content(50); ?>
+		</article>
+		<?php endwhile; // end of the loop. ?>
+		<!--<a href='http://www.freepik.com/free-photo/co-workers-making-decisions_861094.htm'>Designed by Freepik</a>-->
+</section>
 <?php get_footer(); // This fxn gets the footer.php file and renders it ?>
 
 
