@@ -35,13 +35,17 @@
 		<article class="col-md-6">
 				<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 				<div class="foto">
-					<?php 
+					<a href="<?php the_permalink();?>"><?php 
 						if ( has_post_thumbnail() ) {
 							the_post_thumbnail('homepage-thumb');
-						}
-					?>
+						}else{?>
+							<img alt="Silvana Cerini Logo" src="<?php echo get_stylesheet_directory_uri();?>/images/backfoto.jpg" /> 
+						<?php }
+					?></a>
 				</div>
-				<?php echo content(50); ?>
+				<div class="content">
+					<?php echo content(50); ?>
+				</div>
 		</article>
 		<?php endwhile; // end of the loop. ?>
 		<!--<a href='http://www.freepik.com/free-photo/co-workers-making-decisions_861094.htm'>Designed by Freepik</a>-->

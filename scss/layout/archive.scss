@@ -1,6 +1,5 @@
 .posteos{
 	article{
-		height: 660px;
 		h2{
 			font-size: 3rem;
 			font-family: 'Raleway';
@@ -8,19 +7,38 @@
 
 			a{
 				color: #23282f;
+
+				&:hover{
+					text-decoration: none;
+					color: $azul;
+				}
 			}
 		}
+		.content{
+			height: 100px;
+			overflow: hidden;
+		}
 		.foto{
-			border:1px solid #666;
-			background: #999;
+
 			img{
+				border:1px solid #666;
 				max-width:100%;
 				height: auto;
-
+			}
+			a:hover{
+				img{
+					border:1px solid $azul;
+				}
 			}
 		}
 		p{
 			&:last-child:after { content: "..."; }
 		}
+	}
+}
+
+.categorias{
+	.page-header{
+		height: 450px;
 	}
 }
