@@ -5,11 +5,18 @@
     padding-bottom:172px;
 }
 .main-header{
+	 @include max-screen(475px) {
+	 	padding:0;
+	 }
+	 @include max-screen(992px) {
+		margin-bottom:10px;
+	}
 	h1.logo{
 		background:url(images/logo.jpg) no-repeat;
-		width: 360px;
+		max-width: 360px;
 		height: 31px;
 		text-indent: -1000px;
+		background-size:100%;
 	}
 	.barra-sup{
 		background: $azul;
@@ -18,18 +25,37 @@
 		&.der{
 			text-align: right;
 			line-height: 100px;
+			@include max-screen(475px) {
+			        font-size:1rem;
+			   		padding:0;
+			   		text-align:center;
+			   		line-height: 50px;
+			   		height: 50px;
+			    }
+
 			span span{
 				font-size:2rem;
 				margin-right: 10px;
+				 @include max-screen(382px) {
+			        font-size:0.7rem;
+			    }
 				&.fa-mobile-phone{
 					font-size: 3rem;
 					position: relative;
 					top:5px;
-
+					 @include max-screen(382px) {
+			        font-size:1rem;
+			   		 }
 				}
 			}
 			.tel{
 				margin-right: 20px;
+			}
+		}
+		
+		&.logo-wrap{
+			 @include max-screen(991px) {
+			height: 30px;
 			}
 		}
 	}
@@ -76,6 +102,12 @@
 			}
 			.caret{
 				margin-left:10px;
+			}
+		}
+
+		.dropdown-menu{
+			li{
+				width: 100%;
 			}
 		}
 	}

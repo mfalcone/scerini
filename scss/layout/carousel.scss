@@ -1,5 +1,6 @@
 .simple-carousel{
 	background:#f0edde;
+	
 	.carousel{
 
 		.carousel-inner{
@@ -86,5 +87,8 @@
 		font-size:2rem;
 		position: absolute;
 		font-family: 'Raleway';
+		@include max-screen(550px) {
+			font-size:1rem;
+		}
 	}
 }

@@ -14,7 +14,7 @@
 	<body <?php body_class( 'class-name' ); ?>>
 		<div class="wrapper">
 		<header class="main-header container">
-			<div class="col-md-6 barra-sup">
+			<div class="col-md-6 barra-sup logo-wrap">
 				<h1 class="logo">Silvana Cerini &gt; Negociación</h1>
 			</div>
 			<div class="col-md-6 barra-sup der">
