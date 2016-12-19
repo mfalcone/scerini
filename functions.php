@@ -13,7 +13,7 @@ add_action( 'init', 'register_my_menus' );
 
 function agregar_estilos_y_js() {
 
-	wp_enqueue_style( 'wpb-google-fonts', 'http://fonts.googleapis.com/css?family=Karla|Raleway', false ); 
+	wp_enqueue_style( 'wpb-google-fonts', 'http://fonts.googleapis.com/css?family=Karla:800italic,700,300,600,800,400|Raleway:800italic,700,300,600,800,400', false ); 
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), '1.1', 'all');
 	wp_enqueue_script('jquery');
 	wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ) );

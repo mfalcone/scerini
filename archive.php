@@ -6,6 +6,11 @@
 </header>
 <?php while ( have_posts() ) : the_post();?>
 <article class="col-md-6"  <?php post_class(); ?>>
+	<div class="date-wrap">
+		<span class="fa fa-calendar-o"></span>
+		<h4><?php the_time('d');?></h4>
+		<h5><?php the_time('M');?></h5>
+	</div>
 	<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 	<div class="foto">
 		<a href="<?php the_permalink();?>"><?php 
@@ -19,6 +24,7 @@
 	<div class="content">
 		<?php echo content(50); ?>
 	</div>
+	<a href="<?php the_permalink();?>" class="vermas">Ver más</a>
 </article>
 <?php endwhile; // end of the loop. ?>
 </section>

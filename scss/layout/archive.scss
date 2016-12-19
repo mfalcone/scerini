@@ -1,10 +1,38 @@
 .posteos{
 	article{
+		.date-wrap{
+			float:left;
+			position:relative;
+			width: 32px;
+			height: 56px;
+			top: 25px;
+			margin-right: 10px;
+			.fa-calendar-o{
+				position:absolute;
+				font-size: 3.5rem;
+			}
+
+			h4{
+				position:absolute;
+				width: 100%;
+				text-align: center;
+				top: 5px;
+			}
+
+			h5{
+				margin:0;
+				position:absolute;
+				bottom:0;
+				left:0;
+				width: 100%;
+				text-align: center;
+			}
+		}
 		h2{
 			font-size: 3rem;
 			font-family: 'Raleway';
 			text-transform: uppercase;
-
+			min-height: 66px;
 			a{
 				color: #23282f;
 
@@ -15,8 +43,10 @@
 			}
 		}
 		.content{
-			height: 100px;
+			height: 260px;
 			overflow: hidden;
+			
+			p:last-child:after { content: "..."; }
 		}
 		.foto{
 
@@ -31,9 +61,8 @@
 				}
 			}
 		}
-		p{
-			&:last-child:after { content: "..."; }
-		}
+
+		
 	}
 }
 
@@ -41,4 +70,38 @@
 	.page-header{
 		height: 450px;
 	}
+}
+.vermas{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: #FFF;
+	padding-top: 10px;
+	border-top: 1px solid;
+	width: 97%;
+	text-align:right;
+	color: $azul;
+	padding-right:5px;
+	padding-bottom:5px;
+	&:hover{
+		background:$azul;
+		color: #FFF;
+	}
+}
+
+.home .posteos article p:nth-last-child(2):after {content: "..."; }
+
+.page-header{
+	background-repeat:no-repeat;
+}
+.category-agenda .page-header{
+	background-image:url(images/cat_agenda.jpg);
+}
+
+.category-temario .page-header{
+	background-image:url(images/temario.jpg);
+}
+
+.category-newsletter .page-header{
+	background-image:url(images/cat_newsletter.jpg);
 }

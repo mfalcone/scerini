@@ -33,6 +33,11 @@
 		$loop = new WP_Query( $args );
 		while ( $loop->have_posts() ) : $loop->the_post(); $counter++; ?>
 		<article class="col-md-6">
+				<div class="date-wrap">
+					<span class="fa fa-calendar-o"></span>
+					<h4><?php the_time('d');?></h4>
+					<h5><?php the_time('M');?></h5>
+				</div>
 				<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 				<div class="foto">
 					<a href="<?php the_permalink();?>"><?php 
@@ -45,6 +50,7 @@
 				</div>
 				<div class="content">
 					<?php echo content(50); ?>
+					<a href="<?php the_permalink();?>" class="vermas">Ver más</a>
 				</div>
 		</article>
 		<?php endwhile; // end of the loop. ?>
