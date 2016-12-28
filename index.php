@@ -20,7 +20,7 @@
 			</div> 
 			<div class="item "> 
 				<img alt="Second slide [900x500]"  src="<?php echo get_stylesheet_directory_uri();?>/images/equipo.jpg" data-holder-rendered="true"> 
-				<h3 class="caption">Negociar con uno mismo es no perdurar en la desición equivocada</h3>
+				<h3 class="caption">"Negociar con uno mismo es no perdurar en la desición equivocada"</h3>
 				<h4 class="autor">Silvana Cerini</h4>
 				<!--<a href="http://www.freepik.com/free-photos-vectors/business">Business photograph designed by Freepik</a>-->
 			</div> 

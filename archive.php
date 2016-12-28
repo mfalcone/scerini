@@ -5,6 +5,25 @@
 <h2><?php echo category_description(); ?></h2>
 </header>
 <?php while ( have_posts() ) : the_post();?>
+
+<?php if (is_category('libros')) : ?>
+	<article class="row" <?php post_class(); ?>>
+		<div class="col-md-3">
+			<?php
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail('full');
+			}else{?>
+				<img alt="Silvana Cerini Logo" src="<?php echo get_stylesheet_directory_uri();?>/images/backfoto.jpg" /> 
+			<?php } ?>
+		</div>
+		<div class="col-md-9">
+			<h2><?php the_title(); ?></h2>
+			<div class="content">
+				<?php the_content(); ?>
+			</div>
+		</div>
+	</article>
+<?php else : ?>
 <article class="col-md-6"  <?php post_class(); ?>>
 	<div class="date-wrap">
 		<span class="fa fa-calendar-o"></span>
@@ -26,6 +45,7 @@
 	</div>
 	<a href="<?php the_permalink();?>" class="vermas">Ver más</a>
 </article>
+<?php endif; ?>
 <?php endwhile; // end of the loop. ?>
 </section>
 <?php get_footer();?>
