@@ -23,6 +23,16 @@
 			</div>
 		</div>
 	</article>
+<?php elseif(is_category('video')): ?>
+	<article class="row" <?php post_class(); ?>>
+			<h2><?php the_title(); ?></h2>
+			<div class="content">
+				<?php the_content(); ?>
+			</div>
+			<div class="videoWrapper">
+				<?php echo get_post_meta($post->ID, 'video', true); ?>
+			</div>
+	</article>
 <?php else : ?>
 <article class="col-md-6"  <?php post_class(); ?>>
 	<div class="date-wrap">
