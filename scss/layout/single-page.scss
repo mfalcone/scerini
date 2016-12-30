@@ -30,6 +30,19 @@ header.page-header{
 		text-transform: uppercase;
 		padding:10px;
 	}
+	&.prensa{
+		height:683px;
+		border:1px solid #333;
+		background:#FFF;
+		img{
+			margin-left:auto;
+			margin-right: auto;
+			width:auto;
+			height: auto;
+			display: block;
+			margin-top:100px;
+		}
+	}
 }
 
 .single-page{
@@ -40,5 +53,14 @@ header.page-header{
 			color: #555;
 			padding:30px 0 80px 0; 
 			line-height:2.6rem;
+		}
+
+		ol{
+			list-style: decimal;
+			padding-left: 20px;
+		}
+		ul{
+			list-style:disc;
+			padding-left:20px;
 		}
 }

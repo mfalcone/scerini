@@ -18,7 +18,7 @@
 				<h1 class="logo">Silvana Cerini &gt; Negociación</h1>
 			</div>
 			<div class="col-md-6 barra-sup der">
-				<span class="tel"><span class="fa fa-mobile-phone"></span>0500-34576</span>	
+				<span class="tel"><span class="fa fa-mobile-phone"></span>(+54.11) 4519.8583</span>	
 				<span class="mail"><span class="fa fa-envelope"></span>silvanacerini@consultoracerini.com.ar</span>
 			</div>
 			<div class="row">

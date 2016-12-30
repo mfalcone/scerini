@@ -127,7 +127,18 @@
 	background-image:url(images/cat_newsletter.jpg);
 }
 
+.category-video .page-header{
+	background-image:url(images/cat_video.jpg);
+}
+
+.category-prensa .page-header{
+	background-image:url(images/cat_prensa.jpg);
+}
+
 .category-libros{
+	.page-header{
+		background-image:url(images/cat_libros.jpg);
+	}
 	article.row{
 		margin-bottom: 20px;
 	}
