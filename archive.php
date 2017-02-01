@@ -28,13 +28,18 @@
 			<div class="content">
 				<?php the_content(); ?>
 			</div>
-			<div class="videoWrapper">
-				<?php echo get_post_meta($post->ID, 'video', true); ?>
-			</div>
+			<?php 
+			if ( has_post_thumbnail() ) {?>
+				<div class="video-image"><?php the_post_thumbnail('full');?></div>
+			<?php }else{?>
+				<div class="videoWrapper">
+					<?php echo get_post_meta($post->ID, 'video', true); ?>
+				</div>
+			<?php } ?>
 	</article>
 <?php elseif(is_category('empresas-capacitadas')): ?>
 	<article class="col-md-3 empresas" <?php post_class(); ?>>
-			<a href="<?php echo get_post_meta($post->ID, 'link', true); ?>">
+			<a href="<?php echo get_post_meta($post->ID, 'link', true); ?>" target="_blank">
 			<div class="logo-wrap">
 			<?php if ( has_post_thumbnail() ) {
 				the_post_thumbnail(array(150,150));
@@ -46,6 +51,8 @@
 			</a>
 			
 	</article>
+
+	
 <?php else : ?>
 <article class="col-md-6"  <?php post_class(); ?>>
 	<!--<div class="date-wrap">
@@ -71,5 +78,26 @@
 </article>
 <?php endif; ?>
 <?php endwhile; // end of the loop. ?>
+
+<?php 
+	if(is_category('empresas-capacitadas')){?>
+	<div class="capacitadas-externas">
+	<?php 
+	$args = array(
+    	'category_name' => 'empresas-capacitadas-externas'
+		);
+	$category_query = new WP_Query($args);
+	
+		if ($category_query->have_posts()) {
+		    while ($category_query->have_posts()) {
+		        $category_query->the_post();
+		        ?>
+		        <h2 class="entry-title"><?php the_title(); ?></h2>
+		        <div class="entry-content" itemprop="text"><?php the_content(); ?></div>
+		        <?php
+		    }
+		}?>
+	</div>
+	<?php }?>
 </section>
 <?php get_footer();?>
