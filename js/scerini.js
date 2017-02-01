@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 	$('#carousel-example-generic').carousel({
-		interval:4000
+		interval:8000
 	})
 	$('#carousel-example-generic h3').hide()
 	$('#carousel-example-generic .active h3').fadeIn();

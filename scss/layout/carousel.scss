@@ -78,6 +78,20 @@
 					top:60px;
               	}
               }
+
+              &:nth-child(4){
+              	h3,h4{
+              		top:0;
+              		right:0;
+              		width:60%;
+					text-align: right;
+              	}
+
+              	h4{
+					right:0%;
+					top:80px;
+              	}
+              }
 		  }
 		  .active {
 			  opacity: 1;

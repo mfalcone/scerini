@@ -6,6 +6,7 @@
 			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li> 
 			<li data-target="#carousel-example-generic" data-slide-to="1" class=""></li> 
 			<li data-target="#carousel-example-generic" data-slide-to="2" class=""></li> 
+			<li data-target="#carousel-example-generic" data-slide-to="3" class=""></li> 
 		</ol> 
 		<div class="carousel-inner col-md-12" role="listbox"> 
 			<div class="item active"> 
@@ -15,12 +16,18 @@
 			</div> 
 			<div class="item "> 
 				<img alt="Second slide [900x500]"  src="<?php echo get_stylesheet_directory_uri();?>/images/manos.jpg" data-holder-rendered="true"> 
-					<h3 class="caption">"No decir mas de lo que haga falta, a quien haga falta y cuando haga falta"</h3>
+					<h3 class="caption">"Negociar con uno mismo es elegir la mejor de las opciones para luego, con empeño, esforzarse para mejorarla"</h3>
 					<h4 class="autor">André Maurois</h4>
 			</div> 
 			<div class="item "> 
 				<img alt="Second slide [900x500]"  src="<?php echo get_stylesheet_directory_uri();?>/images/equipo.jpg" data-holder-rendered="true"> 
 				<h3 class="caption">"Negociar con uno mismo es no perdurar en la desición equivocada"</h3>
+				<h4 class="autor">Silvana Cerini</h4>
+				<!--<a href="http://www.freepik.com/free-photos-vectors/business">Business photograph designed by Freepik</a>-->
+			</div> 
+			<div class="item "> 
+				<img alt="Second slide [900x500]"  src="<?php echo get_stylesheet_directory_uri();?>/images/fortachon.jpg" data-holder-rendered="true"> 
+				<h3 class="caption">"Negociar con uno mismo es escuchar respetuosamente y actuar con ética, conducta que importa honestidad para con uno, y para los demás"</h3>
 				<h4 class="autor">Silvana Cerini</h4>
 				<!--<a href="http://www.freepik.com/free-photos-vectors/business">Business photograph designed by Freepik</a>-->
 			</div> 
@@ -35,11 +42,11 @@
 		$loop = new WP_Query( $args );
 		while ( $loop->have_posts() ) : $loop->the_post(); $counter++; ?>
 		<article class="col-md-6">
-				<div class="date-wrap">
+				<!--<div class="date-wrap">
 					<span class="fa fa-calendar-o"></span>
 					<h4><?php the_time('d');?></h4>
 					<h5><?php the_time('M');?></h5>
-				</div>
+				</div>-->
 				<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 				<div class="foto">
 					<a href="<?php the_permalink();?>"><?php 
@@ -51,7 +58,8 @@
 					?></a>
 				</div>
 				<div class="content">
-					<?php echo content(50); ?>
+					<?php //echo content(50); ?>
+					<?php the_excerpt(); ?>
 					<a href="<?php the_permalink();?>" class="vermas">Ver más</a>
 				</div>
 		</article>

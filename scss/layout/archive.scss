@@ -29,10 +29,13 @@
 			}
 		}
 		h2{
-			font-size: 3rem;
+			font-size: 2rem;
 			font-family: 'Raleway';
 			text-transform: uppercase;
-			min-height: 66px;
+			background:none;
+			text-align:left;
+			border-bottom:0;
+			padding-top:10px;
 			a{
 				color: #23282f;
 
@@ -43,9 +46,9 @@
 			}
 		}
 		.content{
-			height: 260px;
-			overflow: hidden;
 			
+			overflow: hidden;
+		    padding-bottom: 40px;
 			p:last-child:after { content: "..."; }
 		}
 		.foto{
@@ -135,6 +138,14 @@
 	background-image:url(images/cat_prensa.jpg);
 }
 
+.category-workshop .page-header{
+	background-image:url(images/cat_workshop.jpg);
+}
+
+.category-empresas-capacitadas .page-header{
+	background-image:url(images/cat_empresas_capacitadas.jpg);
+}
+
 .category-libros{
 	.page-header{
 		background-image:url(images/cat_libros.jpg);
@@ -142,4 +153,28 @@
 	article.row{
 		margin-bottom: 20px;
 	}
+}
+
+article.empresas{
+	 .logo-wrap{
+		width:152px;
+		height:152px;
+		border:1px solid #999;
+		background:#DDD;
+		margin-left:auto;
+		margin-right:auto;
+		img{
+			display: block;
+			margin-left:auto;
+			margin-right: auto;
+		}
+	}
+
+	h5{
+		text-align: center;
+	}
+}
+
+.category-temario h2{
+	height:50px;
 }

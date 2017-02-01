@@ -1,10 +1,17 @@
 .main-footer{
-	background:$verde;
+	background:$azul;
 	height:172px;
 	text-align:center;
 	color:#FFF;
-	line-height:85px;
-	font-size:3.6rem;
-	font-family:'karla';
 	margin-top:-152px;
+	padding-top:20px;
+	h2{
+		background:url(images/logo.jpg) no-repeat;
+		max-width: 320px;
+		height: 43px;
+		text-indent: -100000px;
+		background-size:100%;
+		margin-left:auto;
+		margin-right:auto;
+	}
 }

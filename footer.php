@@ -1,6 +1,6 @@
 </div><!--wrapper-->
 <footer class="main-footer">
-	Silvana Cerini ®
+	<h2>Silvana Cerini</h2>
 </footer>
 </body>
 </html>

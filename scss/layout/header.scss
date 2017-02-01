@@ -13,18 +13,17 @@
 	}
 	h1.logo{
 		background:url(images/logo.jpg) no-repeat;
-		max-width: 360px;
-		height: 31px;
+		max-width: 507px;
+		height: 43px;
 		text-indent: -1000px;
 		background-size:100%;
 	}
 	.barra-sup{
 		background: $azul;
 		color: #FFF;
-		height:70px;
+		height:85px;
 		&.der{
 			text-align: right;
-			line-height: 100px;
 			@include max-screen(475px) {
 			        font-size:1rem;
 			   		padding:0;
@@ -55,7 +54,7 @@
 		
 		&.logo-wrap{
 			 @include max-screen(991px) {
-			height: 30px;
+			height: 40px;
 			}
 		}
 	}
