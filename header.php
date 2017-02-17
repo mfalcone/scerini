@@ -15,11 +15,11 @@
 		<div class="wrapper">
 		<header class="main-header container">
 			<div class="col-md-6 barra-sup logo-wrap">
-				<h1 class="logo">Silvana Cerini &gt; Negociación</h1>
+				<h1 class="logo"><a href="<?php echo site_url(); ?>">Silvana Cerini &gt; Negociación</a></h1>
 			</div>
 			<div class="col-md-6 barra-sup der">
 				<span class="tel"><span class="fa fa-phone "></span>(+54.11) 4519.8583</span>	
-				<span class="cel"><span class="fa fa-mobile-phone"></span>(+54.11) 4419.1895</span>	<br>
+				<span class="cel"><span class="fa fa-mobile-phone"></span>(+54.11) 4419.1891</span>	<br>
 				<span class="mail"><span class="fa fa-envelope"></span>silvanacerini@consultoracerini.com.ar</span>	<br>
 				<span class="mail"><span class="fa fa-envelope"></span>silvanacerini@scerini-negociacion.com.ar</span>
 			</div>

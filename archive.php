@@ -42,7 +42,7 @@
 			<a href="<?php echo get_post_meta($post->ID, 'link', true); ?>" target="_blank">
 			<div class="logo-wrap">
 			<?php if ( has_post_thumbnail() ) {
-				the_post_thumbnail(array(150,150));
+				the_post_thumbnail(array(150,9999));
 			}else{?>
 				<img alt="Silvana Cerini Logo" src="<?php echo get_stylesheet_directory_uri();?>/images/backfoto.jpg" /> 
 			<?php } ?>

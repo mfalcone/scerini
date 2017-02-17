@@ -5,7 +5,7 @@
 			<header class="page-header">
 				<h1><?php the_title(); ?></h1>
 				<?php if ( has_post_thumbnail() ) {
-						the_post_thumbnail('large');
+						the_post_thumbnail('full');
 					}else{?>
 						<img alt="Silvana Cerini Logo" src="<?php echo get_stylesheet_directory_uri();?>/images/backfoto_large.jpg" /> 
 					<?php }?>

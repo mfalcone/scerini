@@ -17,6 +17,10 @@
 		height: 43px;
 		text-indent: -1000px;
 		background-size:100%;
+
+		a{
+			display:block;	
+		}
 	}
 	.barra-sup{
 		background: $azul;
@@ -91,7 +95,7 @@
 		min-height: auto;
 		li{
 			float:left;
-			font-size:1.45rem;
+			font-size:1.31rem;
 			text-transform: uppercase;
 
 			&.current-menu-item{
@@ -103,6 +107,10 @@
 			}
 			.caret{
 				margin-left:10px;
+			}
+
+			a{
+				padding:10px;
 			}
 		}
 

@@ -46,5 +46,17 @@ add_action( 'init', 'add_taxonomies_to_pages' );
 
 add_theme_support( 'post-thumbnails' );
 
-add_image_size( 'homepage-thumb', 540, 360 );
+add_image_size( 'homepage-thumb', 540, 225 );
+
+
+//Page Slug Body Class
+function add_slug_body_class( $classes ) {
+global $post;
+if ( isset( $post ) ) {
+$classes[] = $post->post_type . '-' . $post->post_name;
+}
+return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );
+
 ?>

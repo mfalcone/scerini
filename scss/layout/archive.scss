@@ -177,14 +177,12 @@ article.empresas{
 		width:152px;
 		height:152px;
 		border:1px solid #999;
-		background:#DDD;
+		background:#FFF;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		margin-left:auto;
-		margin-right:auto;
-		img{
-			display: block;
-			margin-left:auto;
-			margin-right: auto;
-		}
+		margin-right: auto;
 	}
 
 	h5{
